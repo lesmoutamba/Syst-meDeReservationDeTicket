@@ -45,6 +45,12 @@ public class Identification extends JFrame {
 	/**
 	 * Create the frame.
 	 */
+	
+	public void clearFieldValue() {
+		pseudoTF.setText("");
+		motdepassePF.setText("");
+	}
+	
 	public Identification() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 825, 395);
@@ -76,7 +82,7 @@ public class Identification extends JFrame {
 		contentPane.add(lblMotDePasse);
 		
 		pseudoTF = new JTextField();
-		pseudoTF.setBounds(378, 63, 220, 29);
+		pseudoTF.setBounds(378, 63, 220, 22);
 		contentPane.add(pseudoTF);
 		pseudoTF.setColumns(10);
 		
@@ -139,6 +145,14 @@ public class Identification extends JFrame {
 		contentPane.add(btnNewButton);
 		
 		JButton btnReset = new JButton("Actualiser");
+		btnReset.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				clearFieldValue();
+				
+			}
+		});
+		
 		btnReset.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		btnReset.setBounds(506, 167, 92, 36);
 		contentPane.add(btnReset);
@@ -178,7 +192,7 @@ public class Identification extends JFrame {
 		contentPane.add(btnAdministrateurs);
 		
 		motdepassePF = new JPasswordField();
-		motdepassePF.setBounds(378, 113, 220, 29);
+		motdepassePF.setBounds(378, 113, 220, 22);
 		contentPane.add(motdepassePF);
 	}
 }

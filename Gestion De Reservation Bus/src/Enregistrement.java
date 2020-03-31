@@ -51,6 +51,16 @@ public class Enregistrement extends JFrame {
 	/**
 	 * Create the frame.
 	 */
+	
+	public void clearFieldValue() {
+		nomTF.setText("");
+		prenomTF.setText("");
+		pseudoTF.setText("");
+		motdepassePF.setText("");
+		emailTF.setText("");
+		telephoneTF.setText("");	
+	}
+	
 	public Enregistrement() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 983, 390);
@@ -145,6 +155,13 @@ public class Enregistrement extends JFrame {
 		contentPane.add(btnEnregistrer);
 		
 		JButton btnActualiser = new JButton("Actualiser");
+		btnActualiser.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				clearFieldValue();
+			}
+		});
+		
 		btnActualiser.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		btnActualiser.setBounds(491, 226, 174, 36);
 		contentPane.add(btnActualiser);
@@ -184,6 +201,17 @@ public class Enregistrement extends JFrame {
 		contentPane.add(lblEmail);
 		
 		JButton btnIdentificationTF = new JButton("Avez vous d\u00E9j\u00E0 un compte ? Identifiez-vous");
+		btnIdentificationTF.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				dispose();
+				Identification id = new Identification();
+				setLocationRelativeTo(null);
+				id.setVisible(true);
+				
+			}
+		});
+		
 		btnIdentificationTF.setBackground(Color.ORANGE);
 		btnIdentificationTF.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		btnIdentificationTF.setBounds(156, 282, 509, 36);

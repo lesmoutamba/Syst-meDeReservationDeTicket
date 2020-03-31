@@ -122,7 +122,7 @@ public class ReservationClient extends JInternalFrame {
                       ResultSet rs1=stat.executeQuery(selectQuery1);
                    
                       table.setModel(DbUtils.resultSetToTableModel(rs1));
-                      table.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
+                      /*table.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);*/
 					}
 					catch (Exception ex){
 						System.out.println(ex);
@@ -138,7 +138,7 @@ public class ReservationClient extends JInternalFrame {
 		JScrollPane scrollPane = new JScrollPane();
 		scrollPane.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
 		scrollPane.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
-		scrollPane.setBounds(10, 53, 766, 230);
+		scrollPane.setBounds(10, 53, 766, 260);
 		getContentPane().add(scrollPane);
 		
 		table = new JTable();

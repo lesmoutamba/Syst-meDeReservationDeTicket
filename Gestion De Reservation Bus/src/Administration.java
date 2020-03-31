@@ -45,6 +45,12 @@ public class Administration extends JFrame {
 	/**
 	 * Create the frame.
 	 */
+	
+	public void clearFieldValue() {
+		adminpseudoTF.setText("");
+		motdepasseadminTF.setText("");	
+	}
+	
 	public Administration() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 766, 379);
@@ -71,7 +77,7 @@ public class Administration extends JFrame {
 		
 		adminpseudoTF = new JTextField();
 		adminpseudoTF.setColumns(10);
-		adminpseudoTF.setBounds(389, 69, 220, 29);
+		adminpseudoTF.setBounds(389, 69, 220, 22);
 		contentPane.add(adminpseudoTF);
 		
 		Label label_2 = new Label("ADMINISTRATEUR");
@@ -135,6 +141,12 @@ try {
 		contentPane.add(button);
 		
 		JButton button_1 = new JButton("Actualiser");
+		button_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				clearFieldValue();
+			}
+		});
 		button_1.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		button_1.setBounds(517, 180, 92, 36);
 		contentPane.add(button_1);
@@ -155,7 +167,7 @@ try {
 		contentPane.add(btnUtilisateur);
 		
 		motdepasseadminTF = new JPasswordField();
-		motdepasseadminTF.setBounds(389, 116, 220, 29);
+		motdepasseadminTF.setBounds(389, 118, 220, 22);
 		contentPane.add(motdepasseadminTF);
 	}
 }

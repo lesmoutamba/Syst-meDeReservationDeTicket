@@ -188,6 +188,17 @@ public class AccueilAdmin extends JFrame {
 		mntmMesRservations.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
+				try {
+					ListeReservations listereservation = new ListeReservations();
+					desktopPane.add(listereservation);
+					desktopPane.moveToFront(listereservation);
+					listereservation.setSize(desktopPane.getWidth(),desktopPane.getHeight());
+					//ajoutbus.setLocation(null);
+					listereservation.show();
+					}
+					catch (Exception e1) {
+						e1.printStackTrace();
+					}
 			}
 		});
 		
@@ -338,6 +349,12 @@ public class AccueilAdmin extends JFrame {
 		mnNewMenu_3.add(mntmNewMenuItem_18);
 		
 		JMenuItem mntmNewMenuItem_13 = new JMenuItem("Afficher Conducteurs");
+		mntmNewMenuItem_13.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+			}
+		});
+		
 		mntmNewMenuItem_13.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_P, InputEvent.CTRL_MASK));
 		mnNewMenu_3.add(mntmNewMenuItem_13);
 		
@@ -381,6 +398,16 @@ public class AccueilAdmin extends JFrame {
 		menuBar.add(mnNewMenu_6);
 		
 		JMenuItem mntmNewMenuItem_17 = new JMenuItem("Se D\u00E9connecter");
+		mntmNewMenuItem_17.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				
+				dispose();
+				Administration admin = new Administration();
+				admin.setLocationRelativeTo(null);
+				admin.setVisible(true);
+			}
+		});
+		
 		mntmNewMenuItem_17.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_X, InputEvent.CTRL_MASK));
 		mnNewMenu_6.add(mntmNewMenuItem_17);
 		

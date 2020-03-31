@@ -11,6 +11,7 @@ import java.awt.Button;
 import java.awt.Point;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.JLabel;
 
 public class InterfacePrincipale extends JFrame {
 
@@ -49,12 +50,12 @@ public class InterfacePrincipale extends JFrame {
 		panel.setBounds(10, 32, 751, 52);
 		contentPane.add(panel);
 		
-		Label label = new Label("RESERVATION DES TICKETS DE BUS");
+		Label label = new Label("Gestion Des R\u00E9servations De Tickets");
 		label.setFont(new Font("Tahoma", Font.BOLD, 28));
 		label.setAlignment(Label.CENTER);
 		panel.add(label);
 		
-		Button button = new Button("Identifiez-vous");
+		Button button = new Button("Cliquez ici, pour vous identifer");
 		button.addActionListener(new ActionListener() {
 			
 			public void actionPerformed(ActionEvent e) {
@@ -66,12 +67,12 @@ public class InterfacePrincipale extends JFrame {
 			}
 			
 		});
-		button.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		button.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		button.setBackground(Color.LIGHT_GRAY);
-		button.setBounds(131, 153, 156, 36);
+		button.setBounds(374, 142, 253, 52);
 		contentPane.add(button);
 		
-		Button button_1 = new Button("Administrateur");
+		Button button_1 = new Button("Cliquez ici, pour vous identifier");
 		button_1.addActionListener(new ActionListener() {
 			
 			public void actionPerformed(ActionEvent e) {
@@ -83,8 +84,18 @@ public class InterfacePrincipale extends JFrame {
 			
 		});
 		button_1.setBackground(Color.LIGHT_GRAY);
-		button_1.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		button_1.setBounds(485, 153, 156, 36);
+		button_1.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		button_1.setBounds(374, 216, 253, 52);
 		contentPane.add(button_1);
+		
+		JLabel lblNewLabel = new JLabel("Si vous etes un client");
+		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lblNewLabel.setBounds(136, 153, 197, 29);
+		contentPane.add(lblNewLabel);
+		
+		JLabel lblSiVousEtes = new JLabel("Si vous etes un Administrateur");
+		lblSiVousEtes.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lblSiVousEtes.setBounds(128, 229, 240, 29);
+		contentPane.add(lblSiVousEtes);
 	}
 }
