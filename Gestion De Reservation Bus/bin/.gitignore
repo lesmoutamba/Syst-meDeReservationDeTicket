@@ -68,3 +68,7 @@
 /ReservationClient.class
 /EnregistrementTest.class
 /AssignerConducteurTest.class
+/AjouterReservationTest.class
+/AjouterConducteurTest.class
+/AjoutBusTest.class
+/AdministrationTest.class

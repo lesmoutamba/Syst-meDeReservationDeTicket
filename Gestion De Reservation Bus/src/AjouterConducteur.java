@@ -46,7 +46,7 @@ public class AjouterConducteur extends JInternalFrame {
 		
 	}
 	
-	public void clearFieldValue() {
+	public void actualiser() {
 		nomConducteurTF.setText("");
 		prenomConducteurTF.setText("");
 		emailConducteurTF.setText("");
@@ -111,13 +111,6 @@ public class AjouterConducteur extends JInternalFrame {
 		JButton btnAjouter = new JButton("Ajouter");
 		btnAjouter.addActionListener(new ActionListener() {
 			
-			public void clearFieldValue() {
-				nomConducteurTF.setText("");
-				prenomConducteurTF.setText("");
-				emailConducteurTF.setText("");
-				telephoneConducteurTF.setText("");
-				
-			}
 			
 			public void actionPerformed(ActionEvent e) {
 				
@@ -140,13 +133,14 @@ public class AjouterConducteur extends JInternalFrame {
 					if (rs.next() == true) {
 						infoMessage(" Ce conducteur existe déjà!!!" , "Alert!!");
 						
-						clearFieldValue();
+						actualiser();
 					}
 					else {
 						String insertQuery = "insert into details_conducteurs values('0','"+nomconducteur+"' , '"+prenomconducteur+"', '"+emailconducteur+"' , '"+telephoneconducteur+"')";
 						stat.executeUpdate(insertQuery);
 						infoMessage(" Le conducteur a ete ajouté avec succès!!!" , "Alert!!");
-						clearFieldValue();
+						
+						actualiser();
 						
 					}
 					

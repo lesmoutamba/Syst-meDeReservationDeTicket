@@ -156,7 +156,7 @@ public class AccueilUtilisateur extends JFrame {
 	
 	
 	public AccueilUtilisateur() {
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		/*setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 983, 505);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -164,7 +164,7 @@ public class AccueilUtilisateur extends JFrame {
 		contentPane.setLayout(null);
 		
 		
-		/*JLabel jLabel1 = new JLabel("Utilisateur");
+		JLabel jLabel1 = new JLabel("Utilisateur");
 		jLabel1.setHorizontalAlignment(SwingConstants.LEFT);
 		jLabel1.setLabelFor(this);
 		jLabel1.setFont(new Font("Tahoma", Font.PLAIN, 18));

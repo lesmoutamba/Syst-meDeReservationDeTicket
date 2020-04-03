@@ -65,6 +65,13 @@ public class AjouterReservation extends JInternalFrame {
 	static JComboBox comboBox1;
 	static JComboBox comboBox2;
 	
+	
+	public void infoMessage(String message , String titre) {
+		JOptionPane.showMessageDialog(null, message, titre, JOptionPane.INFORMATION_MESSAGE);
+		
+	}
+	
+	
 	public void departInfo() {
 		
 		try {
@@ -86,7 +93,7 @@ public class AjouterReservation extends JInternalFrame {
 		}
 	}
 	
-public void destinationInfo() {
+   public void destinationInfo() {
 		
 		try {
 			
@@ -109,6 +116,7 @@ public void destinationInfo() {
 
 
 String pseudoUtilisateur;
+
 public AjouterReservation(String pseudoUtil) {
 	
 	setResizable(true);
@@ -380,20 +388,17 @@ public AjouterReservation(String pseudoUtil) {
 	destinationInfo();
 }
 
-public void infoMessage(String message , String titre) {
-	JOptionPane.showMessageDialog(null, message, titre, JOptionPane.INFORMATION_MESSAGE);
-	
-}
+
 
 	public AjouterReservation() {
-		setResizable(true);
+		/*setResizable(true);
 		setClosable(true);
 		setMaximizable(true);
 		setIconifiable(true);
 		setBounds(1, 1, 851, 417);
 		getContentPane().setLayout(null);
 		
-		/*JButton btnRechercher = new JButton("Rechercher");
+		JButton btnRechercher = new JButton("Rechercher");
 		btnRechercher.addActionListener(new ActionListener() {
 			
 			public void actionPerformed(ActionEvent arg0) {

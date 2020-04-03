@@ -46,7 +46,7 @@ public class Administration extends JFrame {
 	 * Create the frame.
 	 */
 	
-	public void clearFieldValue() {
+	public void actualiser() {
 		adminpseudoTF.setText("");
 		motdepasseadminTF.setText("");	
 	}
@@ -146,7 +146,7 @@ public class Administration extends JFrame {
 		button_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				clearFieldValue();
+				actualiser();
 			}
 		});
 		button_1.setFont(new Font("Tahoma", Font.PLAIN, 14));

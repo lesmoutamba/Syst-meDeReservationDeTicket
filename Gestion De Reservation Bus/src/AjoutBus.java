@@ -64,7 +64,7 @@ public class AjoutBus extends JInternalFrame {
 	}
 	
 	
-	public void clearFieldValue() {
+	public void actualiser() {
 		busnoTF.setText("");
 		busdepartTF.setText("");
 		busdestinationTF.setText("");
@@ -153,13 +153,14 @@ public class AjoutBus extends JInternalFrame {
 					if (rs.next() == true) {
 						infoMessage(" Ce details existe déjà!!!" , "Alert!!");
 						
-						clearFieldValue();
+						actualiser();
 					}
 					else {
 						String insertQuery = "insert into details_bus values('0','"+busno+"' , '"+busdepart+"', '"+busdestination+"' , '"+datedepartD+"' , '"+bagage+"' , '"+heure+"' , '"+prix+"' , '"+nbre_siege+"')";
 						stat.executeUpdate(insertQuery);
 						infoMessage(" Le détails a ete creé avec succès!!!" , "Alert!!");
-						clearFieldValue();
+						
+						actualiser();
 						
 					}
 					
