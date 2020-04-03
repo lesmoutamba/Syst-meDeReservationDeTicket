@@ -38,6 +38,13 @@ public class AssignerConducteur extends JInternalFrame {
 	static JComboBox comboBox1;
 	static JComboBox comboBox2;
 	
+	
+	
+	 public void infoMessage(String message, String tittle) {
+	      JOptionPane.showMessageDialog(null, message, tittle, JOptionPane.INFORMATION_MESSAGE);
+	   }
+	   
+	
 	public void conducteursInfo() {
 		
 		try {
@@ -59,7 +66,7 @@ public class AssignerConducteur extends JInternalFrame {
 		}
 	}
 	
-public void busNoConducteur() {
+  public void busNoConducteur() {
 		
 		try {
 			
@@ -79,6 +86,8 @@ public void busNoConducteur() {
 			System.out.println(ex);
 		}
 	}
+  
+   
 	/**
 	 * Create the frame.
 	 */
@@ -119,9 +128,6 @@ public void busNoConducteur() {
 		JButton btnAssigner = new JButton("Assigner");
 		btnAssigner.addActionListener(new ActionListener() {
 			
-			public void infoMessage(String message, String tittle) {
-		        JOptionPane.showMessageDialog(null, message, tittle, JOptionPane.INFORMATION_MESSAGE);
-		    }
 			
 			public void actionPerformed(ActionEvent e) {
 				

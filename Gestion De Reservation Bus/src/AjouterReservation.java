@@ -205,6 +205,7 @@ public AjouterReservation(String pseudoUtil) {
 			
 			int index = table.getSelectedRow();
 			TableModel model = table.getModel();
+			
 			String busno = (String) model.getValueAt(index, 1);
 	        String busdepart = (String) model.getValueAt(index, 2);
 	        String busdestination = (String) model.getValueAt(index, 3);
@@ -392,7 +393,7 @@ public void infoMessage(String message , String titre) {
 		setBounds(1, 1, 851, 417);
 		getContentPane().setLayout(null);
 		
-		JButton btnRechercher = new JButton("Rechercher");
+		/*JButton btnRechercher = new JButton("Rechercher");
 		btnRechercher.addActionListener(new ActionListener() {
 			
 			public void actionPerformed(ActionEvent arg0) {
@@ -619,6 +620,8 @@ public void infoMessage(String message , String titre) {
 		getContentPane().add(scrollPane);
 		
 		table = new JTable();
+		table.setColumnSelectionAllowed(true);
+		table.setCellSelectionEnabled(true);
 		scrollPane.setViewportView(table);
 		
 		JLabel lblMesReservations = new JLabel("Mes r\u00E9servations ...");
@@ -648,6 +651,6 @@ public void infoMessage(String message , String titre) {
 		
 		departInfo();
 		destinationInfo();
-
+                           */
 	}
 }

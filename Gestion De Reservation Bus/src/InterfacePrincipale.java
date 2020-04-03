@@ -77,6 +77,7 @@ public class InterfacePrincipale extends JFrame {
 			
 			public void actionPerformed(ActionEvent e) {
 				
+				dispose();
 				Administration admin = new Administration();
 				admin.setLocationRelativeTo(null);
 				admin.setVisible(true);

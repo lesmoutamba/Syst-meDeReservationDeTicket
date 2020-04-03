@@ -51,6 +51,11 @@ public class Administration extends JFrame {
 		motdepasseadminTF.setText("");	
 	}
 	
+	
+	public void infoMessage(String message , String titre) {
+		JOptionPane.showMessageDialog(null, message, titre, JOptionPane.INFORMATION_MESSAGE);
+	}
+	
 	public Administration() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 766, 379);
@@ -89,9 +94,6 @@ public class Administration extends JFrame {
 		JButton button = new JButton("Je valide");
 		button.addActionListener(new ActionListener() {
 			
-			public void infoMessage(String message , String titre) {
-				JOptionPane.showMessageDialog(null, message, titre, JOptionPane.INFORMATION_MESSAGE);
-			}
 			
 			public void actionPerformed(ActionEvent arg0) {
 				
@@ -100,7 +102,7 @@ public class Administration extends JFrame {
 				String motdepasse = motdepasseadminTF.getText();
 				
 				
-try {
+            try {
 					
 					Class.forName("com.mysql.jdbc.Driver");
 				    String databaseURL = "jdbc:mysql://localhost:3308/gestionticket?characterEncoding=latin1";

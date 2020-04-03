@@ -99,7 +99,7 @@ public class ReservationClient extends JInternalFrame {
 	
 	
 	public ReservationClient() {
-		setResizable(true);
+		/*setResizable(true);
 		setMaximizable(true);
 		setIconifiable(true);
 		setClosable(true);
@@ -122,7 +122,7 @@ public class ReservationClient extends JInternalFrame {
                       ResultSet rs1=stat.executeQuery(selectQuery1);
                    
                       table.setModel(DbUtils.resultSetToTableModel(rs1));
-                      /*table.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);*/
+                      table.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
 					}
 					catch (Exception ex){
 						System.out.println(ex);
@@ -142,7 +142,7 @@ public class ReservationClient extends JInternalFrame {
 		getContentPane().add(scrollPane);
 		
 		table = new JTable();
-		scrollPane.setViewportView(table);
-
+		scrollPane.setViewportView(table); */
+ 
 	}
 }

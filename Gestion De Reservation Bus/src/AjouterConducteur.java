@@ -45,6 +45,15 @@ public class AjouterConducteur extends JInternalFrame {
 		JOptionPane.showMessageDialog(null, message, titre, JOptionPane.INFORMATION_MESSAGE);
 		
 	}
+	
+	public void clearFieldValue() {
+		nomConducteurTF.setText("");
+		prenomConducteurTF.setText("");
+		emailConducteurTF.setText("");
+		telephoneConducteurTF.setText("");
+		
+	}
+	
 	public AjouterConducteur() {
 		setResizable(true);
 		setClosable(true);

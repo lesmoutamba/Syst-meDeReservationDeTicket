@@ -211,6 +211,16 @@ public class AccueilAdmin extends JFrame {
 		menuBar.add(mnNewMenu_6);
 		
 		JMenuItem mntmNewMenuItem_17 = new JMenuItem("Se D\u00E9connecter");
+		mntmNewMenuItem_17.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				
+				dispose();
+				Administration admin = new Administration();
+				admin.setLocationRelativeTo(null);
+				admin.setVisible(true);
+			}
+		});
+		
 		mntmNewMenuItem_17.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_X, InputEvent.CTRL_MASK));
 		mnNewMenu_6.add(mntmNewMenuItem_17);
 		
@@ -240,7 +250,7 @@ public class AccueilAdmin extends JFrame {
 	static JDesktopPane desktopPane;
 	
 	public AccueilAdmin() {
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		/*setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 983, 507);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -427,6 +437,6 @@ public class AccueilAdmin extends JFrame {
 		
 		
 		desktopPane = new JDesktopPane();
-		scrollPane.setViewportView(desktopPane);
+		scrollPane.setViewportView(desktopPane);*/
 	}
 }

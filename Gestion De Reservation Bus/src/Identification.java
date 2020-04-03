@@ -46,10 +46,17 @@ public class Identification extends JFrame {
 	 * Create the frame.
 	 */
 	
-	public void clearFieldValue() {
+	public void actualiser() {
 		pseudoTF.setText("");
 		motdepassePF.setText("");
 	}
+	
+	
+	public void infoMessage(String message , String titre) {
+		JOptionPane.showMessageDialog(null, message, titre, JOptionPane.INFORMATION_MESSAGE);
+		
+	}
+	
 	
 	public Identification() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -89,10 +96,7 @@ public class Identification extends JFrame {
 		JButton btnNewButton = new JButton("Je valide");
 		btnNewButton.addActionListener(new ActionListener() {
 			
-			public void infoMessage(String message , String titre) {
-				JOptionPane.showMessageDialog(null, message, titre, JOptionPane.INFORMATION_MESSAGE);
-				
-			}
+			
 			public void actionPerformed(ActionEvent arg0) {
 				
 				
@@ -148,7 +152,7 @@ public class Identification extends JFrame {
 		btnReset.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				clearFieldValue();
+				actualiser();
 				
 			}
 		});

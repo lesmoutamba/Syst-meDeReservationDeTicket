@@ -22,7 +22,7 @@ public class AccueilUtilisateur extends JFrame {
 
 	private JPanel contentPane;
 	
-    String pseudoUtilisateur;
+    
     
     
 	/**
@@ -43,7 +43,8 @@ public class AccueilUtilisateur extends JFrame {
 		
 	}
 	
-	
+	static JDesktopPane desktopPane;
+	String pseudoUtilisateur;
 	
 	public AccueilUtilisateur (String pseudoUtil) {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -153,7 +154,6 @@ public class AccueilUtilisateur extends JFrame {
 	 * Create the frame.
 	 */
 	
-	static JDesktopPane desktopPane;
 	
 	public AccueilUtilisateur() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -164,7 +164,7 @@ public class AccueilUtilisateur extends JFrame {
 		contentPane.setLayout(null);
 		
 		
-		JLabel jLabel1 = new JLabel("Utilisateur");
+		/*JLabel jLabel1 = new JLabel("Utilisateur");
 		jLabel1.setHorizontalAlignment(SwingConstants.LEFT);
 		jLabel1.setLabelFor(this);
 		jLabel1.setFont(new Font("Tahoma", Font.PLAIN, 18));
@@ -250,7 +250,7 @@ public class AccueilUtilisateur extends JFrame {
 		
 		desktopPane = new JDesktopPane();
 		desktopPane.setBounds(20, 95, 937, 360);
-		contentPane.add(desktopPane);
+		contentPane.add(desktopPane); */
 	}
 	
 	private javax.swing.JLabel jLabel1;

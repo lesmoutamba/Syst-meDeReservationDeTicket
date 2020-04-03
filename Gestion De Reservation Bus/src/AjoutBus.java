@@ -52,17 +52,31 @@ public class AjoutBus extends JInternalFrame {
 			}
 		});
 	}
-
-	/**
-	 * Create the frame.
-	 */
+	
+	
+	static JDateChooser datedepartTF;
+	static JComboBox comboBoxTF;
+	
+	
 	public void infoMessage(String message , String titre) {
 		JOptionPane.showMessageDialog(null, message, titre, JOptionPane.INFORMATION_MESSAGE);
 		
 	}
 	
-	static JDateChooser datedepartTF;
-	static JComboBox comboBoxTF;
+	
+	public void clearFieldValue() {
+		busnoTF.setText("");
+		busdepartTF.setText("");
+		busdestinationTF.setText("");
+		horaireTF.setText("");
+		prixTF.setText("");
+		siegeTF.setText("");	
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	
 	
 	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public AjoutBus() {
@@ -108,14 +122,7 @@ public class AjoutBus extends JInternalFrame {
 		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		btnNewButton.addActionListener(new ActionListener() {
 			
-			public void clearFieldValue() {
-				busnoTF.setText("");
-				busdepartTF.setText("");
-				busdestinationTF.setText("");
-				horaireTF.setText("");
-				prixTF.setText("");
-				siegeTF.setText("");	
-			}
+
 			
 			public void actionPerformed(ActionEvent arg0) {
 				

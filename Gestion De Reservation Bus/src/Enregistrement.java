@@ -52,7 +52,7 @@ public class Enregistrement extends JFrame {
 	 * Create the frame.
 	 */
 	
-	public void clearFieldValue() {
+	public void actualiser() {
 		nomTF.setText("");
 		prenomTF.setText("");
 		pseudoTF.setText("");
@@ -60,6 +60,13 @@ public class Enregistrement extends JFrame {
 		emailTF.setText("");
 		telephoneTF.setText("");	
 	}
+	
+	
+	public void infoMessage(String message , String titre) {
+		JOptionPane.showMessageDialog(null, message, titre, JOptionPane.INFORMATION_MESSAGE);
+		
+	}
+	
 	
 	public Enregistrement() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -98,10 +105,6 @@ public class Enregistrement extends JFrame {
 		JButton btnEnregistrer = new JButton("Enregistrer");
 		btnEnregistrer.addActionListener(new ActionListener() {
 			
-			public void infoMessage(String message , String titre) {
-				JOptionPane.showMessageDialog(null, message, titre, JOptionPane.INFORMATION_MESSAGE);
-				
-			}
 			
 			public void actionPerformed(ActionEvent e) {
 				
@@ -158,7 +161,7 @@ public class Enregistrement extends JFrame {
 		btnActualiser.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				clearFieldValue();
+				actualiser();
 			}
 		});
 		
