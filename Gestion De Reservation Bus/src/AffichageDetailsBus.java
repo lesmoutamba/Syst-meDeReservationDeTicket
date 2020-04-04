@@ -17,6 +17,7 @@ import javax.swing.*;
 
 
 public class AffichageDetailsBus extends JInternalFrame {
+	
 	private JTable table;
 
 	/**
@@ -44,7 +45,7 @@ public class AffichageDetailsBus extends JInternalFrame {
 		setResizable(true);
 		setMaximizable(true);
 		setIconifiable(true);
-		setBounds(1, 1, 983, 437);
+		setBounds(1, 1, 933, 437);
 		getContentPane().setLayout(null);
 		
 		JScrollPane scrollPaneTable = new JScrollPane();
@@ -62,7 +63,7 @@ public class AffichageDetailsBus extends JInternalFrame {
 			}
 		));
 		
-		JButton btnNewButton = new JButton("Cliquez ici pour afficher");
+		JButton btnNewButton = new JButton("Afficher");
 		btnNewButton.addActionListener(new ActionListener() {
 			
 			public void actionPerformed(ActionEvent arg0) {
@@ -87,8 +88,18 @@ public class AffichageDetailsBus extends JInternalFrame {
 		
 		
 		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		btnNewButton.setBounds(10, 11, 172, 23);
+		btnNewButton.setBounds(10, 11, 114, 23);
 		getContentPane().add(btnNewButton);
+		
+		JButton btnNewButton_1 = new JButton("Modifier");
+		btnNewButton_1.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		btnNewButton_1.setBounds(160, 11, 114, 23);
+		getContentPane().add(btnNewButton_1);
+		
+		JButton btnSupprimer = new JButton("Supprimer");
+		btnSupprimer.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		btnSupprimer.setBounds(300, 11, 114, 23);
+		getContentPane().add(btnSupprimer);
 
 	}
 }
