@@ -90,16 +90,6 @@ public class AffichageDetailsBus extends JInternalFrame {
 		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		btnNewButton.setBounds(10, 11, 114, 23);
 		getContentPane().add(btnNewButton);
-		
-		JButton btnNewButton_1 = new JButton("Modifier");
-		btnNewButton_1.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		btnNewButton_1.setBounds(160, 11, 114, 23);
-		getContentPane().add(btnNewButton_1);
-		
-		JButton btnSupprimer = new JButton("Supprimer");
-		btnSupprimer.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		btnSupprimer.setBounds(300, 11, 114, 23);
-		getContentPane().add(btnSupprimer);
 
 	}
 }

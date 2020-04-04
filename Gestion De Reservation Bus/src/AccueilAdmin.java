@@ -42,6 +42,8 @@ public class AccueilAdmin extends JFrame {
 	/**
 	 * Create the frame.
 	 */
+	
+	static JDesktopPane desktopPane;
 	String adminpseudo;
 	
 	public AccueilAdmin (String apseudo) {
@@ -156,9 +158,9 @@ public class AccueilAdmin extends JFrame {
 		mntmNewMenuItem_18.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_B, InputEvent.CTRL_MASK));
 		mnNewMenu_3.add(mntmNewMenuItem_18);
 		
-		JMenuItem mntmNewMenuItem_13 = new JMenuItem("Afficher Conducteurs");
+		/*JMenuItem mntmNewMenuItem_13 = new JMenuItem("Afficher Conducteurs");
 		mntmNewMenuItem_13.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_P, InputEvent.CTRL_MASK));
-		mnNewMenu_3.add(mntmNewMenuItem_13);
+		mnNewMenu_3.add(mntmNewMenuItem_13);*/
 		
 		JMenu mnNewMenu_5 = new JMenu("Reservations");
 		mnNewMenu_5.setFont(new Font("Segoe UI", Font.PLAIN, 14));
@@ -247,7 +249,6 @@ public class AccueilAdmin extends JFrame {
 	
 	
 	
-	static JDesktopPane desktopPane;
 	
 	public AccueilAdmin() {
 		
